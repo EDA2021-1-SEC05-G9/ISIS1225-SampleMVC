@@ -71,3 +71,6 @@ def createTagList():
     """
     taglist = lt.newList(datastructure='SINGLE_LINKED')
     return taglist
+
+def saludo(quiensaludo):
+    return '-'*41 + '\n Hola Buenas Tardes ' + quiensaludo + ' :D' + '\n' + '-'*41 + '\n'

@@ -57,3 +57,7 @@ def loadBooksTags(catalog):
     TODO
     """
     pass
+
+def importacionSaludo(quiensaludo):
+    saludo = model.saludo(quiensaludo)
+    return saludo
