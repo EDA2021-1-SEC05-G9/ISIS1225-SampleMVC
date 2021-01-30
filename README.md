@@ -37,3 +37,4 @@ Este directorio contiene todo el código de base que se entrega para el funciona
 -------------------
 
 * Edición del README de Cristian Camilo Cortes Moreno - EDA - 2020-1 - 30 Enero - 202011908 |-| Desde mi rama cc.cortesm1
+* Edicion del README de Juan Felipe Serrano Martinez - EDA - 2021 - 1 - 30 Enero - 201921654 /-/ Desde mi rama j.serrano 
