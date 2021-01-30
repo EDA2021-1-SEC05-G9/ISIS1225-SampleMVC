@@ -42,7 +42,7 @@ def printMenu():
     print("Opciones:")
     print("1- Cargar Libros")
     print("2- Cargar Tags")
-    # TO-DO: Modificaciones para completar el laboratorio 1.
+    print('3- Saludo')
     print("0- Salir")
 
 
@@ -65,7 +65,7 @@ Menu principal
 """
 while True:
     printMenu()
-    inputs = input('Seleccione una opción para continuar\n')
+    inputs = input('Seleccione una opción para continuar: ')
     if int(inputs[0]) == 1:
         print("Cargando información de libros....")
         books = loadBooks()
@@ -75,7 +75,12 @@ while True:
         print("Cargando información de tags....")
         tags = loadTags()
         print('Total de tags cargados: ' + str(lt.size(tags)))
-    # TO-DO: Modificaciones para completar el laboratorio 1.
+        
+    elif int(inputs[0]) == 3:
+        quiensaludo = input('Ingrese su nombre mi estimado ( ͡° ͜ʖ ͡°): ').strip()
+        print("\nCargando saludo....\n")
+        saludo = controller.importacionSaludo(quiensaludo)
+        print(saludo)
 
     else:
         sys.exit(0)
