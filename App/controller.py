@@ -54,10 +54,20 @@ def loadTags(filename):
 
 def loadBooksTags(catalog):
     """
-    TODO
+    Hace lo mismo que "loadTags". Puse el mismo codigo porque los datos de tags y
+    de booktags son muy parecidos así que me parecio mas apropiado :)
     """
-    pass
-
-def importacionSaludo(quiensaludo):
-    saludo = model.saludo(quiensaludo)
+    bookstagsfile = cf.data_dir + catalog
+    input_file = csv.DictReader(open(bookstagsfile, encoding='utf-8'))
+    bookstags = model.createBookTagList()
+    for book_tag in input_file:
+        model.addBookTag(bookstags, book_tag)
+    return bookstags
+    
+    
+def loadSaludo(name):
+    '''
+    Carga el saludo :)
+    '''
+    saludo = model.saludo(name)
     return saludo
