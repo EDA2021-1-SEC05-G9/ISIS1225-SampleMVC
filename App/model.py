@@ -72,5 +72,23 @@ def createTagList():
     taglist = lt.newList(datastructure='SINGLE_LINKED')
     return taglist
 
-def saludo(quiensaludo):
-    return '-'*41 + '\n Hola Buenas Tardes ' + quiensaludo + ' :D' + '\n' + '-'*41 + '\n'
+def addBookTag(booktaglist, booktag):
+    """
+    Hace lo mismo que "addtag" solo que con el nombre booktag :)
+    """
+    lt.addLast(booktaglist, booktag)
+
+
+def createBookTagList():
+    """
+    Hace lo msimo que "createtaglist" solo que con el nombre booktag :)
+    """
+    booktaglist = lt.newList(datastructure='SINGLE_LINKED')
+    return booktaglist
+
+
+def saludo(name):
+    '''
+    Hace un saludo muy bonito :D
+    '''
+    return '-'*42 + '\n  !Hola, Buenas Tardes ' + name + '! :D' + '\n' + '-'*42 + '\n'

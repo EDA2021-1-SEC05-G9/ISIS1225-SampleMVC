@@ -42,7 +42,8 @@ def printMenu():
     print("Opciones:")
     print("1- Cargar Libros")
     print("2- Cargar Tags")
-    print('3- Saludo')
+    print('3- Cargar Book_Tags')
+    print('4- Saludo')
     print("0- Salir")
 
 
@@ -59,6 +60,17 @@ def loadTags():
     """
     return controller.loadTags('GoodReads/tags.csv')
 
+def loadBooksTags():
+    '''
+    Carga los BooksTags
+    '''
+    return controller.loadBooksTags('GoodReads/book_tags-small.csv')
+    
+def loadSaludo(name):
+    '''
+    Carga el saludo :)
+    '''
+    return controller.loadSaludo(name)
 
 """
 Menu principal
@@ -75,11 +87,16 @@ while True:
         print("Cargando información de tags....")
         tags = loadTags()
         print('Total de tags cargados: ' + str(lt.size(tags)))
-        
+    
     elif int(inputs[0]) == 3:
-        quiensaludo = input('Ingrese su nombre mi estimado ( ͡° ͜ʖ ͡°): ').strip()
+        print('Cargando información de Books Tags....')
+        bookstags = loadBooksTags()
+        print('Total de books tags cargados: ' + str(lt.size(bookstags)))
+        
+    elif int(inputs[0]) == 4:
+        name = input('Ingrese su nombre mi estimado ( ͡° ͜ʖ ͡°): ').strip()
         print("\nCargando saludo....\n")
-        saludo = controller.importacionSaludo(quiensaludo)
+        saludo = loadSaludo(name)
         print(saludo)
 
     else:
